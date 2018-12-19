@@ -1,25 +1,24 @@
 package main
+
 import "fmt"
 
-// type Vertex struct {
-//   x int
-//   y int
-// }
-// func main() {
-//   v := Vertex{100,22}
-//   v.x = 121
-//   fmt.Println(v.x)
-// }
+type rectangle struct {
+length  int
+breadth int
+color   string
+}
 
 func main() {
-  k := []struct {
-     a int
-     z bool
-  }{
-    {1,true},
-    {2,true},
-  }
+var rect1 = &rectangle{10,20,"Green"} // Can't skip any value
+fmt.Println(rect1)
 
-  fmt.Println(k)
+var rect2 = &rectangle{}
+rect2.length = 10
+rect2.color  = "Red"
+fmt.Println(rect2)  // breadth skipped
 
+var rect3 = &rectangle{}
+(*rect3).breadth = 10
+(*rect3).color  = "Blue"
+fmt.Println(rect3)  // length skipped
 }

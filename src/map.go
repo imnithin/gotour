@@ -2,17 +2,15 @@ package main
 import "fmt"
 
 type Vertex struct {
-  x float64
-  y float64
+  Lat float64
+  Long float64
 }
 
-var m map[string]Vertex
+var m = map[string]Vertex {
+  "bill" : Vertex{1,2},
+  "gates" : Vertex{1,2},
+}
 
-func main(){
-  m = make(map[string]Vertex)
-  m["Bill Clinton"] = Vertex{
-    40.0, -10.93,
-  }
-  fmt.Println(m["Bill Clinton"])
-
+func main() {
+  fmt.Println(m)
 }

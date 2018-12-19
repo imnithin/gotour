@@ -11,8 +11,8 @@ func main() {
   case "darwin":
     fmt.Println("OS X")
   case "linux":
-    fmt.Println("Linux")
+    fmt.Println("Linux.")
   default:
-    fmt.Println("Wow OS")
+    fmt.Println("other")
   }
 }
